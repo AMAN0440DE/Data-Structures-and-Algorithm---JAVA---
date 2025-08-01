@@ -36,14 +36,40 @@ public class Striver_Recursion_1 {
         System.out.println(i);
         q3(i-1,n);
     }
+
+    // Q4 Print 1 to N using Backtracking
+    public static void q4(int i , int n){
+        if(i<1){
+            return;
+        }
+        q4(i-1,n);
+        System.out.println(i);
+    } 
+
+    // Q5 Print N to 1 using Backtarcking
+    public static void q5(int i , int n){
+        if(i>n){
+            return;
+        }
+        q5(i+1, n);
+        System.out.println(i);
+    }
     public static void main(String args[]){
         Scanner K = new Scanner(System.in);
         f();
         
         int n = K.nextInt();
         q1(1, n);
+        System.out.println("Q1 Done /////////////////////////////");
         q2(1, n);
+        System.out.println("Q2 Done /////////////////////////////");
         q3(n, n);          // n , n because eg. 3, 3 will pass and compare 3<1, 2<1, 1<1, 0<1 -> return
+        System.out.println("Q3 Done /////////////////////////////");
+        q4(n, n);
+        System.out.println("Q4 Done /////////////////////////////");
+        q5(1, n);
+        System.out.println("Q5 Done /////////////////////////////");
+
 
     }
 }
